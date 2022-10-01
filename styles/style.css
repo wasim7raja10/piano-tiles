@@ -17,7 +17,7 @@ body {
   overflow-y: scroll;
 }
 
-::-webkit-scrollbar {
+.canvas::-webkit-scrollbar {
   display: none;
 }
 
