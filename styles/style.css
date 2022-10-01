@@ -1,37 +1,37 @@
 /* removed default margin and padding from every element */
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  background-color: gray;
+	background-color: gray;
 }
 
 /* canvas */
 .canvas {
-  height: 100vh;
-  margin: auto;
-  background-color: white;
-  max-width: 400px;
-  overflow-y: scroll;
+	height: 100vh;
+	margin: auto;
+	background-color: white;
+	max-width: 400px;
+	overflow-y: scroll;
 }
 
-::-webkit-scrollbar {
-  display: none;
+.canvas::-webkit-scrollbar {
+	display: none;
 }
 
 .rows {
-  height: 150px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+	height: 150px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .white-tiles {
-  border: 1px solid whitesmoke;
+	border: 1px solid whitesmoke;
 }
 
 .black-tile {
-  background-color: black;
+	background-color: black;
 }
