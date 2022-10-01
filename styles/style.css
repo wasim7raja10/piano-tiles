@@ -1,3 +1,4 @@
+/* removed default margin and padding from every element */
 * {
   margin: 0;
   padding: 0;
