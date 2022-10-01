@@ -19,6 +19,12 @@ function makeCanvas(canvas) {
 	canvas.scrollTop = canvas.scrollHeight;
 }
 
-function moveCanvas() {}
+function moveCanvas(canvas, speed) {
+	setTimeout(() => canvasScroll(), 10);
+	function canvasScroll() {
+		canvas.scrollTop = canvas.scrollTop - speed;
+		setTimeout(() => canvasScroll(), 10);
+	}
+}
 
 export { makeCanvas, moveCanvas };
