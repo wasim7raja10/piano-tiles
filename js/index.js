@@ -6,4 +6,4 @@ makeCanvas(canvas);
 
 disableScroll(canvas);
 
-moveCanvas(canvas, 3);
+moveCanvas(canvas, 0);
