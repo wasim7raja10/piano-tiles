@@ -27,4 +27,10 @@ function moveCanvas(canvas, speed) {
 	}
 }
 
-export { makeCanvas, moveCanvas };
+function disableScroll(canvas) {
+	canvas.addEventListener("wheel", (e) => e.preventDefault(), {
+		passive: false,
+	});
+}
+
+export { makeCanvas, moveCanvas, disableScroll };
