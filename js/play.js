@@ -19,6 +19,8 @@ function gameOver(score, e) {
 	if (e) {
 		const targetTile = e.target;
 		targetTile.style.backgroundColor = "red";
+	} else {
+		score.currentScore--;
 	}
 	if (checkIfHighScore(score)) {
 		updateHighScore(score);
