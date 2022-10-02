@@ -1,6 +1,7 @@
 function makeCanvas(canvas) {
 	canvas.classList.add("canvas");
 	document.querySelector("body").appendChild(canvas);
+	let randPosition;
 	for (let i = 0; i < 2000; i++) {
 		const rows = document.createElement("div");
 		rows.classList.add("rows");
@@ -10,7 +11,7 @@ function makeCanvas(canvas) {
 			<div data-index=${i + "2"} class="white-tiles"></div>
 			<div data-index=${i + "3"} class="white-tiles"></div>
 		`;
-		const randPosition = Math.floor(Math.random() * 4);
+		randPosition = Math.floor(Math.random() * 4);
 		rows
 			.querySelectorAll(".white-tiles")
 			[randPosition].classList.add("black-tile");
@@ -19,7 +20,31 @@ function makeCanvas(canvas) {
 			[randPosition].classList.remove("white-tiles");
 		canvas.appendChild(rows);
 	}
+	makeStartPosition(canvas);
 	canvas.scrollTop = canvas.scrollHeight;
+	return makeStartButton(randPosition);
+}
+
+function makeStartPosition(canvas) {
+	for (let index = 0; index < 2; index++) {
+		const rows = document.createElement("div");
+		rows.classList.add("rows");
+		canvas.appendChild(rows);
+	}
+}
+
+function makeStartButton(randPosition) {
+	const firstTile = document.querySelector(
+		`[data-index="${"1999" + randPosition}"]`
+	);
+	firstTile.innerHTML = `<p> START </p>`;
+	firstTile.style = `
+		color: white;
+		display: grid;
+		place-content: center;
+		font-size: 1.5rem;
+	`;
+	return firstTile;
 }
 
 function moveCanvas(canvas, speed) {
@@ -36,4 +61,4 @@ function disableScroll(canvas) {
 	});
 }
 
-export { makeCanvas, moveCanvas, disableScroll };
+export { makeCanvas, moveCanvas, disableScroll, makeStartButton };

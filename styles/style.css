@@ -27,10 +27,12 @@ body {
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	background-color: yellow;
 }
 
 .white-tiles {
 	border: 1px solid whitesmoke;
+	background-color: white;
 }
 
 .black-tile {

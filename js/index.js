@@ -2,11 +2,19 @@ import { disableScroll, makeCanvas, moveCanvas } from "./canvas.js";
 import { play } from "./play.js";
 
 const canvas = document.createElement("div");
+let startBtn;
 
-makeCanvas(canvas);
+// onLoad
+function onLoad() {
+	startBtn = makeCanvas(canvas);
+	disableScroll(canvas);
+}
 
-disableScroll(canvas);
+// gamestart
+function gameStart() {
+	moveCanvas(canvas, 0);
+	play();
+}
 
-moveCanvas(canvas, 0);
-
-play();
+onLoad();
+startBtn.addEventListener("click", gameStart);
