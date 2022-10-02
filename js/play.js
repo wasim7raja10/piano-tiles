@@ -23,13 +23,13 @@ function gameOver(e, score) {
 }
 
 function handleClickBlackTile(e, score) {
-	console.log(score);
 	const targetTile = e.target;
 	targetTile.style.backgroundColor = "gray";
 	targetTile.classList.remove("black-tile");
 	const updatedScore = updateScore(score);
 	document.querySelector("#current-score").innerText =
 		updatedScore.currentScore;
+	targetTile.style.pointerEvents = "none";
 }
 
 export { play };
