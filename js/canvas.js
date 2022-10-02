@@ -28,7 +28,7 @@ function makeCanvas(canvas) {
 function makeStartPosition(canvas) {
 	for (let index = 0; index < 2; index++) {
 		const rows = document.createElement("div");
-		rows.classList.add("rows");
+		rows.classList.add("rows-start");
 		canvas.appendChild(rows);
 	}
 }
