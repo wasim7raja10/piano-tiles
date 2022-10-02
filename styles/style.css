@@ -2,6 +2,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 input,
@@ -25,7 +26,7 @@ body {
 	overflow-y: scroll;
 }
 
-.canvas::-webkit-scrollbar {
+::-webkit-scrollbar {
 	display: none;
 }
 
@@ -67,4 +68,33 @@ body {
 	font-weight: bolder;
 	font-size: larger;
 	font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+}
+
+.gameOver {
+	padding-top: 41vh;
+	position: absolute;
+	z-index: 10;
+	height: 100vh;
+	width: 100vw;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	background-color: rgba(0, 0, 0, 0.431);
+	font-weight: bolder;
+	font-size:xx-large;
+	font-family: "Courier New", Courier, monospace;
+}
+
+.gameOver p{
+	/* width: inherit; */
+	/* height: inherit; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:rgb(255, 255, 255) !important;
 }
