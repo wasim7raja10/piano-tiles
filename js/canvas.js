@@ -57,6 +57,7 @@ function disableScroll(canvas) {
 	canvas.addEventListener("wheel", (e) => e.preventDefault(), {
 		passive: false,
 	});
+	canvas.addEventListener("touchmove", preventDefault, false);
 }
 
 export { makeCanvas, moveCanvas, disableScroll, makeStartButton };
