@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: gray;
+	background-color: #202020;
 }
 
 /* canvas */
@@ -13,7 +13,7 @@ body {
 	height: 100vh;
 	margin: auto;
 	background-color: white;
-	max-width: 400px;
+	max-width: 450px;
 	overflow-y: scroll;
 	cursor: pointer;
 }
@@ -27,7 +27,11 @@ body {
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	background-color: yellow;
+	background-color: rgb(62, 199, 237);
+}
+
+.rows-start {
+	height: 100px;
 }
 
 .white-tiles {
@@ -40,18 +44,19 @@ body {
 }
 
 .score {
-	text-align: center;
-	margin-top:1%;
-	margin-left: 45%;
 	position: fixed;
 	z-index: 10;
+	background-color: whitesmoke;
+	display: flex;
+	left: 50%;
+	transform: translateX(-50%);
+	min-width: max-content;
 }
 
 .score p {
-	padding: 4px;
-	border: 1px solid;
-	border-radius: 16px;
-	width: 80%; 
-	display: inline;
-	background-color: white;
+	padding: 0.7rem;
+	border: 1px solid black;
+	font-weight: bolder;
+	font-size: larger;
+	font-family: "Courier New", Courier, monospace;
 }
