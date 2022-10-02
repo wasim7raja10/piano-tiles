@@ -3,15 +3,14 @@ import { play } from "./play.js";
 
 const canvas = document.querySelector(".canvas");
 let startBtn;
+const prevHighScore = localStorage.getItem("highScore");
 
 // onLoad
 function onLoad() {
 	startBtn = makeCanvas(canvas);
 	disableScroll(canvas);
-	if (!localStorage.getItem("highScore"))
-		localStorage.setItem("highScore", "0");
-	document.querySelector("#high-score").innerText =
-		localStorage.getItem("highScore");
+	if (!prevHighScore) localStorage.setItem("highScore", "0");
+	document.querySelector("#high-score").innerText = prevHighScore;
 }
 
 // gamestart
@@ -19,7 +18,7 @@ function gameStart() {
 	startBtn.style.pointerEvents = "none";
 	const score = {
 		currentScore: 0,
-		highScore: Number(localStorage.getItem("highScore")),
+		highScore: Number(prevHighScore),
 	};
 	document.querySelector("#high-score").innerText = score.highScore;
 	moveCanvas(canvas, 1);
