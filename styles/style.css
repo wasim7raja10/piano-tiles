@@ -50,6 +50,7 @@ body {
 	display: flex;
 	left: 50%;
 	transform: translateX(-50%);
+	min-width: max-content;
 }
 
 .score p {
