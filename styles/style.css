@@ -106,6 +106,7 @@ body {
 }
 
 .gameOver {
+	display: none;
 	padding-top: 41vh;
 	position: absolute;
 	z-index: 10;

@@ -2,6 +2,7 @@ import { disableScroll, makeCanvas, moveCanvas } from "./canvas.js";
 import { play } from "./play.js";
 
 const canvas = document.querySelector(".canvas");
+const restartBtn = document.querySelector("#restart");
 let startBtn;
 const prevHighScore = localStorage.getItem("highScore");
 
@@ -29,3 +30,6 @@ function gameStart() {
 
 onLoad();
 startBtn.addEventListener("click", gameStart);
+restartBtn.addEventListener("click", () => {
+	window.location.reload();
+});

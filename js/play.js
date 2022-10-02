@@ -25,7 +25,8 @@ function gameOver(score, e) {
 	if (checkIfHighScore(score)) {
 		updateHighScore(score);
 	}
-	console.log(score);
+	document.querySelector(".gameOver").style.display = "block";
+	document.querySelector(".score").style.display = "none";
 }
 
 function handleClickBlackTile(e, score, dataIndex) {
@@ -34,7 +35,8 @@ function handleClickBlackTile(e, score, dataIndex) {
 	targetTile.style.backgroundColor = "gray";
 	targetTile.classList.remove("black-tile");
 	const updatedScore = updateScore(score);
-	document.querySelector("#current-score").innerText = updatedScore.currentScore;
+	document.querySelector("#current-score").innerText =
+		updatedScore.currentScore;
 	document.querySelector("#total-score").innerText = updatedScore.currentScore;
 	targetTile.style.pointerEvents = "none";
 	if (checkIfGameOver(dataIndex)) {
