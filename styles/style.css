@@ -27,7 +27,11 @@ body {
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	background-color: yellow;
+	background-color: rgb(62, 199, 237);
+}
+
+.rows-start {
+	height: 70px;
 }
 
 .white-tiles {
