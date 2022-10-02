@@ -16,6 +16,7 @@ function onLoad() {
 
 // gamestart
 function gameStart() {
+	startBtn.style.pointerEvents = "none";
 	const score = {
 		currentScore: 0,
 		highScore: Number(localStorage.getItem("highScore")),
