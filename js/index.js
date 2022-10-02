@@ -12,7 +12,6 @@ function onLoad() {
 	disableScroll(canvas);
 	if (!prevHighScore) localStorage.setItem("highScore", "0");
 	document.querySelector("#high-score").innerText = prevHighScore;
-	document.querySelector("#best-score").innerText = prevHighScore;
 }
 
 // gamestart
@@ -23,7 +22,6 @@ function gameStart() {
 		highScore: Number(prevHighScore),
 	};
 	document.querySelector("#high-score").innerText = score.highScore;
-	document.querySelector("#best-score").innerText = score.highScore;
 	moveCanvas(canvas, 1);
 	play(score);
 }

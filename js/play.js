@@ -27,6 +27,8 @@ function gameOver(score, e) {
 	}
 	document.querySelector(".gameOver").style.display = "block";
 	document.querySelector(".score").style.display = "none";
+	document.querySelector("#best-score").innerText = score.highScore;
+	document.querySelector("#total-score").innerText = score.currentScore;
 }
 
 function handleClickBlackTile(e, score, dataIndex) {
@@ -37,7 +39,6 @@ function handleClickBlackTile(e, score, dataIndex) {
 	const updatedScore = updateScore(score);
 	document.querySelector("#current-score").innerText =
 		updatedScore.currentScore;
-	document.querySelector("#total-score").innerText = updatedScore.currentScore;
 	targetTile.style.pointerEvents = "none";
 	if (checkIfGameOver(dataIndex)) {
 		gameOver(score);
