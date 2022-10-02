@@ -1,6 +1,7 @@
 // update current score
 function updateScore(score) {
-	return score.currentScore++;
+	score.currentScore++;
+	return score;
 }
 
 //checking for highest score
@@ -11,8 +12,8 @@ function checkIfHighScore(score) {
 
 // UPDATING highScore
 function updateHighScore(score) {
-	window.localStorage.setItem("highScore", score.currentScore);
+	localStorage.setItem("highScore", score.currentScore.toString());
 	score.highScore = score.currentScore;
 }
 
-export { updateScore };
+export { updateScore, checkIfHighScore, updateHighScore };

@@ -1,22 +1,35 @@
-function play() {
+import { checkIfHighScore, updateHighScore, updateScore } from "./score.js";
+
+function play(score) {
 	document
 		.querySelectorAll(".black-tile")
-		.forEach((item) => item.addEventListener("click", handleClickBlackTile));
+		.forEach((item) =>
+			item.addEventListener("click", (e) => handleClickBlackTile(e, score))
+		);
 
 	document
 		.querySelectorAll(".white-tiles")
-		.forEach((item) => item.addEventListener("click", gameOver));
+		.forEach((item) =>
+			item.addEventListener("click", (e) => gameOver(e, score))
+		);
 }
 
-function gameOver(e) {
+function gameOver(e, score) {
 	const targetTile = e.target;
 	targetTile.style.backgroundColor = "red";
+	if (checkIfHighScore(score)) {
+		updateHighScore(score);
+	}
 }
 
-function handleClickBlackTile(e) {
+function handleClickBlackTile(e, score) {
+	console.log(score);
 	const targetTile = e.target;
-	targetTile.style.backgroundColor = "green";
+	targetTile.style.backgroundColor = "gray";
 	targetTile.classList.remove("black-tile");
+	const updatedScore = updateScore(score);
+	document.querySelector("#current-score").innerText =
+		updatedScore.currentScore;
 }
 
 export { play };

@@ -42,3 +42,19 @@ body {
 .black-tile {
 	background-color: black;
 }
+
+.score {
+	position: fixed;
+	z-index: 10;
+	background-color: whitesmoke;
+	display: flex;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.score p {
+	padding: 0.7rem;
+	border: 1px solid black;
+	font-weight: bolder;
+	font-size: larger;
+}

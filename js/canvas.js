@@ -1,6 +1,4 @@
 function makeCanvas(canvas) {
-	canvas.classList.add("canvas");
-	document.querySelector("body").appendChild(canvas);
 	let randPosition;
 	for (let i = 0; i < 2000; i++) {
 		const rows = document.createElement("div");
