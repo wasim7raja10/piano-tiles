@@ -12,7 +12,7 @@ function onLoad() {
 
 // gamestart
 function gameStart() {
-	moveCanvas(canvas, 0);
+	moveCanvas(canvas, 1);
 	play();
 }
 
