@@ -2,14 +2,15 @@ function makeCanvas(canvas) {
 	canvas.classList.add("canvas");
 	document.querySelector("body").appendChild(canvas);
 	let randPosition;
+	let currentIndex = 1999;
 	for (let i = 0; i < 2000; i++) {
 		const rows = document.createElement("div");
 		rows.classList.add("rows");
 		rows.innerHTML = `
-			<div data-index=${i + "0"} class="white-tiles"></div>
-			<div data-index=${i + "1"} class="white-tiles"></div>
-			<div data-index=${i + "2"} class="white-tiles"></div>
-			<div data-index=${i + "3"} class="white-tiles"></div>
+			<div data-index=${i + "0"} class="white-tiles A"></div>
+			<div data-index=${i + "1"} class="white-tiles S"></div>
+			<div data-index=${i + "2"} class="white-tiles D"></div>
+			<div data-index=${i + "3"} class="white-tiles F"></div>
 		`;
 		randPosition = Math.floor(Math.random() * 4);
 		rows
@@ -51,6 +52,7 @@ function moveCanvas(canvas, speed) {
 	setTimeout(() => canvasScroll(), 10);
 	function canvasScroll() {
 		canvas.scrollTop = canvas.scrollTop - speed;
+		currentIndex--;
 		setTimeout(() => canvasScroll(), 10);
 	}
 }
