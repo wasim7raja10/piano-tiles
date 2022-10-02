@@ -38,3 +38,20 @@ body {
 .black-tile {
 	background-color: black;
 }
+
+.score {
+	text-align: center;
+	margin-top:1%;
+	margin-left: 45%;
+	position: fixed;
+	z-index: 10;
+}
+
+.score p {
+	padding: 4px;
+	border: 1px solid;
+	border-radius: 16px;
+	width: 80%; 
+	display: inline;
+	background-color: white;
+}
