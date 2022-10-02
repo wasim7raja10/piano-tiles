@@ -8,13 +8,14 @@ function play() {
 		.forEach((item) => item.addEventListener("click", gameOver));
 }
 
-function gameOver() {
-	console.log("game over");
+function gameOver(e) {
+	const targetTile = e.target;
+	targetTile.style.backgroundColor = "red";
 }
 
 function handleClickBlackTile(e) {
 	const targetTile = e.target;
-	targetTile.style.backgroundColor = "red";
+	targetTile.style.backgroundColor = "green";
 	targetTile.classList.remove("black-tile");
 }
 
