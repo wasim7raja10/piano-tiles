@@ -55,6 +55,7 @@ body {
 
 ::-webkit-scrollbar {
 	display: none;
+}
 
 .rows {
 	height: 150px;
@@ -96,6 +97,8 @@ body {
 	font-family: "Courier New", Courier, monospace;
 }
 
+/* gameover */
+
 .container {
 	position: relative;
 	height: 100vh;
@@ -112,19 +115,19 @@ body {
 	background-color: rgba(0, 0, 0, 0.431);
 	color: rgb(255, 255, 255);
 	font-weight: bolder;
-	font-size:xx-large;
+	font-size: xx-large;
 	font-family: "Courier New", Courier, monospace;
 }
 
-.gameOver p{
+.gameOver p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color:rgb(255, 255, 255) !important;
+	color: rgb(255, 255, 255) !important;
 }
 
-#button {
-	font-size:xx-large;
+#restart {
+	font-size: xx-large;
 	font-family: "Courier New", Courier, monospace;
 	font-weight: bolder;
 	color: rgb(255, 255, 255);
