@@ -14,6 +14,9 @@ function makeCanvas(canvas) {
 		rows
 			.querySelectorAll(".white-tiles")
 			[randPosition].classList.add("black-tile");
+		rows
+			.querySelectorAll(".white-tiles")
+			[randPosition].classList.remove("white-tiles");
 		canvas.appendChild(rows);
 	}
 	canvas.scrollTop = canvas.scrollHeight;
