@@ -46,11 +46,7 @@ function makeStartButton(randPosition) {
 }
 
 function moveCanvas(canvas, speed) {
-	setTimeout(() => canvasScroll(), 10);
-	function canvasScroll() {
-		canvas.scrollTop = canvas.scrollTop - speed;
-		setTimeout(() => canvasScroll(), 10);
-	}
+	canvas.classList.add("speed");
 }
 
 function disableScroll(canvas) {
