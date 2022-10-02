@@ -23,7 +23,6 @@ body {
 	background-color: white;
 	max-width: 450px;
 	overflow-y: scroll;
-	cursor: pointer;
 }
 
 .canvas::-webkit-scrollbar {
