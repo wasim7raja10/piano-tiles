@@ -31,7 +31,7 @@ body {
 
 .speed {
 	transform: translateY(0);
-	transition: transform linear 800s;
+	transition: transform linear 1000s;
 }
 
 .speed-1x {
