@@ -5,7 +5,7 @@ const canvas = document.querySelector(".canvas");
 const restartBtn = document.querySelector("#restart");
 let startBtn;
 const prevHighScore = localStorage.getItem("highScore");
-
+const startBtnSound = document.getElementById("start-button-music");
 // onLoad
 function onLoad() {
 	startBtn = makeCanvas(canvas);
@@ -16,6 +16,7 @@ function onLoad() {
 
 // gamestart
 function gameStart() {
+	startBtnSound.play();
 	startBtn.style.pointerEvents = "none";
 	const score = {
 		currentScore: 0,

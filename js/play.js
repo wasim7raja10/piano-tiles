@@ -1,6 +1,8 @@
 import { checkIfHighScore, updateHighScore, updateScore } from "./score.js";
-
+const playMusic = document.getElementById("play-music");
+const resultMusic = document.getElementById("result-music");
 function play(score) {
+	playMusic.play();
 	const dataIndex = ["19990", "0"];
 	document.querySelectorAll(".black-tile").forEach((item) => {
 		item.addEventListener("click", (e) => {
@@ -16,6 +18,8 @@ function play(score) {
 }
 
 function gameOver(score, e) {
+	playMusic.pause();
+	resultMusic.play();
 	if (e) {
 		const targetTile = e.target;
 		targetTile.style.backgroundColor = "red";
