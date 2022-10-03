@@ -39,6 +39,21 @@ function handleClickBlackTile(e, score, dataIndex) {
 	const updatedScore = updateScore(score);
 	document.querySelector("#current-score").innerText =
 		updatedScore.currentScore;
+	// Speed
+	// let element = document.querySelector("#current-score").innerText;
+	// if(element > 5 && element <= 15){
+	// 	document.querySelector(".canvas").classList.remove("speed");
+	// 	document.querySelector(".canvas").classList.add("speed-1x");
+	// }else if(element > 15 && element <= 25){
+	// 	document.querySelector(".canvas").classList.remove("speed-1x");
+	// 	document.querySelector(".canvas").classList.add("speed-2x");
+	// }else if(element > 25 && element <=35 ){
+	// 	document.querySelector(".canvas").classList.remove("speed-2x");
+	// 	document.querySelector(".canvas").classList.add("speed-3x");
+	// }else if(element > 35){
+	// 	document.querySelector(".canvas").classList.remove("speed-3x");
+	// 	document.querySelector(".canvas").classList.add("speed-4x");
+	// }
 	targetTile.style.pointerEvents = "none";
 	if (checkIfGameOver(dataIndex)) {
 		gameOver(score);

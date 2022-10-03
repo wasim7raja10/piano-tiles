@@ -3,6 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	/* --speed: transform 1600s linear; */
 }
 
 input,
@@ -30,27 +31,27 @@ body {
 
 .speed {
 	transform: translateY(0);
-	transition: transform linear 1600s;
+	transition: transform linear 1200s;
 }
 
 .speed-1x {
 	transform: translateY(0);
-	transition: transform linear 1400s;
+	transition: transform linear 1000s;
 }
 
 .speed-2x {
 	transform: translateY(0);
-	transition: transform linear 1200s;
+	transition: transform linear 800s;
 }
 
 .speed-3x {
 	transform: translateY(0);
-	transition: transform linear 1000s;
+	transition: transform linear 700s;
 }
 
 .speed-4x {
 	transform: translateY(0);
-	transition: transform linear 800s;
+	transition: transform linear 500s;
 }
 
 ::-webkit-scrollbar {
